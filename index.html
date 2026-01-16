@@ -15,24 +15,46 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #f4f4f4 0%, #ffe4b5 100%); /* Light orange tint for background */
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffe4e1 100%); /* Light blue-pink gradient for cultural warmth */
             color: #333;
+            line-height: 1.6;
+            font-size: 1rem;
         }
-        h1, h2, h3 {
+        h1 {
             font-family: 'Playfair Display', serif;
-            color: #FF9933; /* Bright saffron orange */
+            font-size: 2.5rem;
+            font-weight: 700;
         }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+        /* Accessibility: Focus states */
+        a:focus, button:focus {
+            outline: 2px solid #00A86B; /* Peacock green for focus */
+            outline-offset: 2px;
+        }
+
+        /* Header: Orange (Day 5) */
         header {
-            background: linear-gradient(135deg, #FF9933 0%, #FF6600 100%); /* Bright orange gradient */
+            background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
             color: white;
             text-align: center;
             padding: 50px 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
+
+        /* Nav: Red (Day 1) */
         nav {
-            background-color: #FF9933; /* Bright orange */
+            background-color: #FF0000;
             padding: 15px 0;
             position: sticky;
             top: 0;
@@ -46,12 +68,12 @@
             transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #FFD700; /* Gold for hover */
+            color: #FFFF00; /* Yellow accent */
         }
+
+        /* Hero: Blue (Day 2) */
         .hero {
-            background-image: url('https://via.placeholder.com/1920x600?text=Tuljabhavani+Goddess+Image'); /* Replace with your image URL */
-            background-size: cover;
-            background-attachment: fixed; /* Parallax effect */
+            background: linear-gradient(135deg, #0000FF 0%, #4169E1 100%);
             height: 60vh;
             display: flex;
             align-items: center;
@@ -60,39 +82,40 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
             position: relative;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(255, 153, 51, 0.4); /* Orange overlay */
-        }
         .hero .container {
             position: relative;
             z-index: 1;
         }
+
+        /* About: Yellow (Day 3) */
+        #about {
+            background: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%);
+            color: #333; /* Dark text for contrast */
+            padding: 50px 0;
+        }
+
+        /* Services: Green (Day 4) */
+        #services {
+            background: linear-gradient(135deg, #008000 0%, #32CD32 100%);
+            color: white;
+            padding: 50px 0;
+        }
         .card {
+            background: rgba(255, 255, 255, 0.9);
             border: none;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(255, 153, 51, 0.3); /* Orange shadow */
+            box-shadow: 0 8px 25px rgba(0, 168, 107, 0.3); /* Peacock green shadow */
         }
-        .btn-custom {
-            background: linear-gradient(135deg, #FF9933 0%, #FF6600 100%); /* Bright orange gradient */
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        .btn-custom:hover {
-            background: linear-gradient(135deg, #FF6600 0%, #FF9933 100%);
-            transform: scale(1.05);
+
+        /* Gallery: White (Day 6) */
+        #gallery {
+            background: #FFFFFF;
+            padding: 50px 0;
+            color: #333;
         }
         .gallery img {
             width: 100%;
@@ -101,19 +124,57 @@
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.3s ease;
+            border: 2px solid #00A86B; /* Peacock green border */
         }
         .gallery img:hover {
             transform: scale(1.05);
         }
+
+        /* Contact: Violet/Purple (Day 7) */
+        #contact {
+            background: linear-gradient(135deg, #800080 0%, #DA70D6 100%);
+            color: white;
+            padding: 50px 0;
+        }
+
+        /* Buttons: Rotating Navratri Colors */
+        .btn-custom {
+            background: linear-gradient(135deg, #FF0000 0%, #0000FF 50%, #FFFF00 100%); /* Red-Blue-Yellow gradient */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .btn-custom:hover {
+            background: linear-gradient(135deg, #008000 0%, #FFA500 50%, #FFC0CB 100%); /* Green-Orange-Pink */
+            transform: scale(1.05);
+        }
+
+        /* Footer: Pink (Day 8) */
         footer {
-            background-color: #FF9933; /* Bright orange */
+            background: linear-gradient(135deg, #FFC0CB 0%, #FF69B4 100%);
             color: white;
             text-align: center;
             padding: 20px;
         }
         footer a {
-            color: #FFD700; /* Gold links */
+            color: #00A86B; /* Peacock green links */
             margin: 0 10px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .hero { height: 50vh; }
+            nav a { margin: 0 10px; font-size: 0.9rem; }
+            .card { margin-bottom: 20px; }
+        }
+        @media (max-width: 480px) {
+            header { padding: 30px 10px; }
+            .hero { height: 40vh; }
+            .btn-custom { padding: 10px 20px; }
         }
     </style>
 </head>
@@ -145,22 +206,22 @@
             <h2 class="text-center mb-4" data-aos="fade-up">About Us</h2>
             <div class="row">
                 <div class="col-md-6" data-aos="fade-right">
-                    <p>We are 16 aane pujari from the genration who has the rights to worship from the generation passed.We are devoted priests, Dilip Ramraje Kadam and Vikram Dilip Kadam, with years of experience in performing pujas, all abhishekam and other rituals. Serving the community with devotion and authenticity.</p>
+                    <p>We are 16 aane pujari from the generation who has the rights to worship from the generation passed. We are devoted priests, Dilip Ramraje Kadam and Vikram Dilip Kadam, with years of experience in performing pujas, all abhishekam and other rituals. Serving the community with devotion and authenticity.</p>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
-                    <img src="https://via.placeholder.com/500x300?text=Priests+Image" alt="Dilip and Vikram Kadam" class="img-fluid rounded">
+                    <img src="https://via.placeholder.com/500x300?text=Priests+Image" alt="Dilip and Vikram Kadam - Devoted Priests" class="img-fluid rounded">
                 </div>
             </div>
         </div>
     </section>
-    <section id="services" class="py-5 bg-light">
+    <section id="services" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4" data-aos="fade-up">Our Services</h2>
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card text-center">
                         <div class="card-body">
-                            <i class="fas fa-pray fa-3x text-warning mb-3"></i>
+                            <i class="fas fa-pray fa-3x text-success mb-3" aria-hidden="true"></i>
                             <h5 class="card-title">Daily Puja</h5>
                             <p class="card-text">Traditional morning/evening rituals. Fee: ₹501</p>
                         </div>
@@ -169,16 +230,16 @@
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card text-center">
                         <div class="card-body">
-                            <i class="fas fa-ring fa-3x text-warning mb-3"></i>
-                            <h5 class="card-title">Prasad Service and Any Ornament Service </h5>
-                            <p class="card-text"> We will provide the Prasad after the online puja done on behalf of you and any ornament such Kavadi maal and New Pardi Puja via Courieer based on the area cost will be conveyed if destination beyoond the flat rate. Please call for the flat rate.</p>
+                            <i class="fas fa-ring fa-3x text-success mb-3" aria-hidden="true"></i>
+                            <h5 class="card-title">Prasad Service and Any Ornament Service</h5>
+                            <p class="card-text">We will provide the Prasad after the online puja done on behalf of you and any ornament such as Kavadi maal and New Pardi Puja via Courier based on the area cost will be conveyed if destination beyond the flat rate. Please call for the flat rate.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card text-center">
                         <div class="card-body">
-                            <i class="fas fa-calendar-alt fa-3x text-warning mb-3"></i>
+                            <i class="fas fa-calendar-alt fa-3x text-success mb-3" aria-hidden="true"></i>
                             <h5 class="card-title">Special Pujas</h5>
                             <p class="card-text">Navratri, Ganesh Chaturthi, etc. Contact for details.</p>
                         </div>
@@ -192,42 +253,42 @@
             <h2 class="text-center mb-4" data-aos="fade-up">Gallery</h2>
             <div class="row gallery">
                 <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://via.placeholder.com/400x300?text=Puja+1" alt="Puja Ritual 1" data-bs-toggle="modal" data-bs-target="#modal1">
+                    <img src="https://via.placeholder.com/400x300?text=Puja+1" alt="Puja Ritual 1 - Traditional Ceremony" data-bs-toggle="modal" data-bs-target="#modal1">
                 </div>
                 <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/400x300?text=Puja+2" alt="Puja Ritual 2" data-bs-toggle="modal" data-bs-target="#modal2">
+                    <img src="https://via.placeholder.com/400x300?text=Puja+2" alt="Puja Ritual 2 - Devotional Service" data-bs-toggle="modal" data-bs-target="#modal2">
                 </div>
                 <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://via.placeholder.com/400x300?text=Puja+3" alt="Puja Ritual 3" data-bs-toggle="modal" data-bs-target="#modal3">
+                    <img src="https://via.placeholder.com/400x300?text=Puja+3" alt="Puja Ritual 3 - Cultural Event" data-bs-toggle="modal" data-bs-target="#modal3">
                 </div>
             </div>
         </div>
     </section>
-    <section id="contact" class="py-5 bg-light">
+    <section id="contact" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4" data-aos="fade-up">Contact Us</h2>
             <p class="text-center" data-aos="fade-up" data-aos-delay="100">For booking pujas, please contact our karmchari (assistant), Vishal Rode-Kadam, via phone call or WhatsApp chat.</p>
             <div class="row">
                 <div class="col-md-6" data-aos="fade-right">
                     <h5>Contact Details</h5>
-                    <p><i class="fas fa-phone"></i> Phone/WhatsApp: Coming Soon</p>
-                    <p><i class="fas fa-envelope"></i> Email: Coming Soon</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Address: Coming Soon</p>
-                    <a href="https://wa.me/[Insert Vishal's Phone Number Here]?text=Hello, I want to book a puja." class="btn btn-custom" target="_blank"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> Phone/WhatsApp: Coming Soon</p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> Email: Coming Soon</p>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Address: Coming Soon</p>
+                    <a href="https://wa.me/[Insert Vishal's Phone Number Here]?text=Hello, I want to book a puja." class="btn btn-custom" target="_blank" aria-label="Book via WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i> Book via WhatsApp</a>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <h5>Send a Message</h5>
-                    <form action="https://formspree.io/f/your-form-id" method="POST"> <!-- Replace 'your-form-id' with your Formspree ID -->
+                    <form action="https://formspree.io/f/your-form-id" method="POST">
                         <div class="mb-3">
-                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required aria-label="Your Name">
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required aria-label="Your Email">
                         </div>
                         <div class="mb-3">
-                            <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+                            <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required aria-label="Your Message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-custom">Send Message</button>
+                        <button type="submit" class="btn btn-custom" aria-label="Send Message">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -235,35 +296,35 @@
     </section>
     <footer>
         <p>&copy; 2026 Shri Dilip Ramraje Kadam and Vikram Dilip Kadam Pujari. All rights reserved.</p>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </footer>
 
     <!-- Modals for Gallery -->
-    <div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body text-center">
-                    <img src="https://via.placeholder.com/800x600?text=Puja+1" alt="Puja Ritual 1" class="img-fluid">
+                    <img src="https://via.placeholder.com/800x600?text=Puja+1" alt="Puja Ritual 1 - Traditional Ceremony" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body text-center">
-                    <img src="https://via.placeholder.com/800x600?text=Puja+2" alt="Puja Ritual 2" class="img-fluid">
+                    <img src="https://via.placeholder.com/800x600?text=Puja+2" alt="Puja Ritual 2 - Devotional Service" class="img-fluid">
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-body text-center">
-                    <img src="https://via.placeholder.com/800x600?text=Puja+3" alt="Puja Ritual 3" class="img-fluid">
+                    <img src="https://via.placeholder.com/800x600?text=Puja+3" alt="Puja Ritual 3 - Cultural Event" class="img-fluid">
                 </div>
             </div>
         </div>
