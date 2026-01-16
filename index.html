@@ -153,6 +153,46 @@
             padding: 40px 0;
         }
     </style>
+
+    <style>
+    /* Add these specific styles for the photo tiles */
+    .header-photo-tile {
+        background: rgba(255, 255, 255, 0.1);
+        border: 3px solid var(--temple-gold);
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+    
+    .header-photo-tile:hover {
+        transform: scale(1.05);
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .pujari-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .pujari-name-tag {
+        font-family: 'Cinzel', serif;
+        font-size: 0.9rem;
+        color: var(--temple-gold);
+        margin-top: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+        .header-photo-tile {
+            margin-bottom: 20px;
+        }
+    }
+</style>
 </head>
 <body>
 
@@ -168,24 +208,59 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">Our Heritage</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Darshan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Darshan">Darshan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <header id="home">
-        <div class="container" data-aos="zoom-in">
-            <h1 class="hero-title">Shri Dilip Ramraje Kadam</h1>
-            <h2 class="text-white">& Vikram Dilip Kadam Pujari</h2>
-            <p class="lead mt-3">Heritage 16 Aane Pujari of Tuljapur – Carrying the Flame of Tradition for Generations.</p>
-            <div class="mt-4">
-                <a href="#services" class="btn btn-divine btn-lg me-3">View Services</a>
-                <a href="#contact" class="btn btn-outline-light btn-lg">Book Puja</a>
+  <header id="home">
+    <div class="container position-relative" data-aos="zoom-in">
+        <div class="row align-items-center">
+            
+            <div class="col-md-3 d-none d-md-block">
+                <div class="header-photo-tile" data-aos="fade-right" data-aos-delay="400">
+                    <img src="https://via.placeholder.com/250x300?text=Dilip+Ramraje+Kadam" alt="Shri Dilip Ramraje Kadam" class="pujari1-img">
+                    <div class="pujari-name-tag">Shri Dilip Ramraje Kadam Udaji</div>
+                </div>
             </div>
+
+            <div class="col-md-6 text-center">
+                <h1 class="hero-title">Divine Seva</h1>
+                <h2 class="text-white mb-4">Shri Dilip Ramraje Kadam Udaji<br> & Vikram Dilip Kadam</h2>
+                <p class="lead mt-3 fw-bold" style="color: var(--temple-gold);">Heritage 16 Aane Pujari of Tuljapur</p>
+                <p class="text-light">Carrying the Flame of Tradition for Generations with Authenticity and Devotion.</p>
+                
+                <div class="mt-4">
+                    <a href="#services" class="btn btn-divine btn-lg m-2">View Services</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg m-2">Book Puja</a>
+                </div>
+            </div>
+
+            <div class="col-md-3 d-none d-md-block">
+                <div class="header-photo-tile" data-aos="fade-left" data-aos-delay="400">
+                    <img src="https://via.placeholder.com/250x300?text=Vikram+Dilip+Kadam" alt="Vikram Dilip Kadam" class="pujari2-img">
+                    <div class="pujari-name-tag">Vikram Dilip Kadam Udaji</div>
+                </div>
+            </div>
+
+            <div class="col-12 d-md-none text-center mt-4">
+                 <div class="row">
+                     <div class="col-6">
+                        <img src="https://via.placeholder.com/150x180?text=Dilip+Ji" class="img-fluid rounded border border-warning">
+                        <p class="small text-white mt-1">Shri Dilip UdaJi</p>
+                     </div>
+                     <div class="col-6">
+                        <img src="https://via.placeholder.com/150x180?text=Vikram+Ji" class="img-fluid rounded border border-warning">
+                        <p class="small text-white mt-1">Vikram UdaJi</p>
+                     </div>
+                 </div>
+            </div>
+
         </div>
-    </header>
+    </div>
+</header>
 
     <section id="about" class="py-5">
         <div class="container">
@@ -222,6 +297,14 @@
                         <h3>Prasad & Ornaments</h3>
                         <p>Receive sacred Prasad, Kavadi Maal, or New Pardi Puja items delivered to your doorstep globally.</p>
                         <p class="text-muted small">*Courier charges apply based on location.</p>
+                    </div>
+                <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="400">
+                    <div class="card h-100 p-4">
+                        <div class="icon-box"><i class="fas fa-fire"></i></div>
+                        <h3>Special Shiansan</h3>
+                        <p>Special Amrakahnd, Dryfruit Shrikahnd, Dahi Shiansan.</p>
+                        <p class="text-muted small">*Sampark/Contact for more Details.</p>
+                        <a href="#contact" class="btn btn-link text-maroon fw-bold">Enquire Now</a>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="400">
@@ -289,4 +372,5 @@
     </script>
 </body>
 </html>
+
 
