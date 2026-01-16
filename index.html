@@ -69,7 +69,21 @@
             color: white !important;
             transform: scale(1.1);
         }
+        /*Pujari Photo */
+        .pujari-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
+           border: 2px solid var(--temple-gold);
+         }
 
+            @media (max-width: 768px) {
+            .hero-title {
+             font-size: 2.5rem; /* Makes title fit better on phones */
+           }
+        }
+        
         /* Hero Section */
         .hero-title {
             font-size: 3.5rem;
@@ -219,47 +233,34 @@
     <div class="container position-relative" data-aos="zoom-in">
         <div class="row align-items-center">
             
-            <div class="col-md-3 d-none d-md-block">
+            <div class="col-6 col-md-3 order-2 order-md-1">
                 <div class="header-photo-tile" data-aos="fade-right" data-aos-delay="400">
-                    <img src="images/Pujari1.jpg" alt="Shri Dilip Ramraje Kadam" 
-                         class="img-fluid rounded border border-warning shadow"
-                         style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
-                    <div class="pujari-name-tag text-center mt-2 small text-white">Shri Dilip Ramraje Kadam Udaji</div>
+                    <img src="images/Pujari1.png" alt="Shri Dilip Ramraje Kadam" class="img-fluid pujari-img">
+                    <div class="pujari-name-tag text-center mt-2 text-white">
+                        <span class="d-none d-md-inline">Shri Dilip Ramraje Kadam Udaji</span>
+                        <span class="d-md-none small">Shri Dilip Udaji</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-6 text-center">
+            <div class="col-12 col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
                 <h1 class="hero-title">Divine Seva</h1>
                 <h2 class="text-white mb-4">Shri Dilip Ramraje Kadam Udaji<br> & Indrajeet Dilip Kadam</h2>
                 <p class="lead mt-3 fw-bold" style="color: #FFD700;">Heritage 16 Aane Pujari of Tuljapur</p>
-                <p class="text-light">Carrying the Flame of Tradition for Generations with Authenticity and Devotion.</p>
-                
                 <div class="mt-4">
                     <a href="#services" class="btn btn-warning btn-lg m-2">View Services</a>
                     <a href="#contact" class="btn btn-outline-light btn-lg m-2">Book Puja</a>
                 </div>
             </div>
 
-            <div class="col-md-3 d-none d-md-block">
+            <div class="col-6 col-md-3 order-3 order-md-3">
                 <div class="header-photo-tile" data-aos="fade-left" data-aos-delay="400">
-                    <img src="images/Pujari2.jpg" alt="Indrajeet Dilip Kadam" 
-                         class="img-fluid rounded border border-warning shadow"
-                         style="width: 100%; aspect-ratio: 1/1; object-fit: cover;">
-                    <div class="pujari-name-tag text-center mt-2 small text-white">Indrajeet Dilip Kadam Udaji</div>
+                    <img src="images/Pujari2.png" alt="Indrajeet Dilip Kadam" class="img-fluid pujari-img">
+                    <div class="pujari-name-tag text-center mt-2 text-white">
+                        <span class="d-none d-md-inline">Indrajeet Dilip Kadam Udaji</span>
+                        <span class="d-md-none small">Shri Indrajeet Udaji</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-12 d-md-none text-center mt-4">
-                 <div class="row">
-                     <div class="col-6">
-                        <img src="images/Pujari1.png" class="img-fluid rounded border border-warning" style="aspect-ratio: 1/1; object-fit: cover;">
-                        <p class="small text-white mt-1">Shri Dilip Udaji</p>
-                     </div>
-                     <div class="col-6">
-                        <img src="images/Pujari2.png" class="img-fluid rounded border border-warning" style="aspect-ratio: 1/1; object-fit: cover;">
-                        <p class="small text-white mt-1">Shri Indrajeet Udaji</p>
-                     </div>
-                 </div>
             </div>
 
         </div>
@@ -376,6 +377,7 @@
     </script>
 </body>
 </html>
+
 
 
 
